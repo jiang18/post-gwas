@@ -11,5 +11,5 @@ All input files should be in BED format, and only the first three columns are re
 
 When genomic gaps should be kept in enrichment analysis, try to use another script of mine, [sd-analysis/association_analysis](https://github.com/jiang18/sd-analysis/tree/master/association_analysis).
 
-### Citation
+#### Citation
 Jiang, Jicai, et al. "Global copy number analyses by next generation sequencing provide insight into pig genome variation." Bmc Genomics 15.1 (2014): 593.
