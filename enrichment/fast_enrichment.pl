@@ -8,7 +8,7 @@ my ($chr_index, $start_index, $end_index) = (0,1,2);
 
 my ($chrom_bed, $gwas_file, $feat_file, $out_prefix, $rep_start, $rep_end) =  @ARGV;
 
-open IN,$chrom_bed;
+open IN,$chrom_bed or die "Cannot open $chrom_bed: $!\n";
 my %chr2len;
 while(<IN>)
 {
@@ -36,7 +36,7 @@ print "Total genome length = $tot_len\n";
 
 my @actual_feat_pos;
 my @feat_len;
-open IN, $feat_file;
+open IN, $feat_file or die "Cannot open $feat_file: $!\n";
 while(<IN>)
 {
 	next if(/^#/);
@@ -70,7 +70,7 @@ print "Total length of genomic features = ", sum(@feat_len), "\n";
 print "Number of unique lengths = ", scalar (uniq @feat_len), "\n";
 
 my @sig_snp;
-open IN, $gwas_file;
+open IN, $gwas_file or die "Cannot open $gwas_file: $!\n";
 while(<IN>)
 {
 	next if(/^#/);
