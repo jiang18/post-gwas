@@ -4,7 +4,7 @@ use List::Util qw(shuffle max min sum);
 use List::MoreUtils qw(uniq);
 
 my ($chr_index, $start_index, $end_index) = (0,1,2);
-@ARGV == 6 or die "chromsome bed, gwas_hits bed, genomic_features bed, replicate_start, replicate_end \n";
+@ARGV == 6 or die "6 arguments needed: chromsome bed, gwas_hits bed, genomic_features bed, output file_prefix, replicate_start, replicate_end \n";
 
 my ($chrom_bed, $gwas_file, $feat_file, $out_prefix, $rep_start, $rep_end) =  @ARGV;
 
